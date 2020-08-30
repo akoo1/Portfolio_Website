@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Our CSS style -->
+    <link href="style.css" rel="stylesheet">
+    <!-- Google fonts for logo -->
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <!-- Fontawesome icons -->
+    <script src="https://kit.fontawesome.com/c838459338.js" crossorigin="anonymous"></script>
+    <title> Personal Portfolio Website | Alfred K </title>
+</head>
+
+<!-- Add a feature that makes the nav link active when at its section -->
+<!-- Make dropdown menu animation, drops down from top to bottom -->
+
+<body>
+    <div class="grid-container">
+
+        <nav class="nav-bar" id="my-nav-bar">
+            <a href="#banner" class="logo">AK</a>
+            <a href="#banner">Home</a>
+            <a href="#about-me">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <!-- "javascript:void(0)" will prevent the anchor tag from going anywhere -->
+            <a href="javascript:void(0)" class="hamburger"><div class="hamburger-btn"></div></a>
+        </nav>
+
+        <section class="banner" id="banner">
+            <div class="heading">
+                <h2>Hello, I'm<br><span>Alfred Koo.</span></h2>
+                <h3>I'm a Computer Science major<br> who enjoys Web Dev</h3>
+                <a href="#about-me" class="about-me-btn">About Me</a>
+            </div>
+            <h1 class="logo">AK</h1>
+        </section>
+
+        <section class="about-me" id="about-me">
+            <div class="heading">
+                <h1>Let me Introduce Myself</h1>
+            </div>
+            <div class="content">
+                <div class="content-text">
+                    Hello good humans, I'm a passionate undergraduate Computer Science student in my junior year at Southern Methodist University.<br><br>
+                    I enjoy software development, especially graphical user interface and web development, and I'm always eager to learn new technology
+                    stacks as well as learn from more talented engineers. Team oriented, and always looking to
+                    sharpen my skills.<br><br>
+                    Currently looking for an <b>internship opportunity</b> related to <b>web development</b> to further pursue my passion
+                    for software development through gaining hands-on experience in the real world.
+                </div>
+                <div class="content-img">
+                    <img src="images/Apple_products.jpg" width="400" height="400">
+                </div>
+            </div>
+        </section>
+
+
+        <section class="skills" id="skills">
+            <div class="content">
+                <div class="card">
+                    <i class="far fa-window-restore"></i>
+                    <h3>Front-End</h3>
+                    <p>HTML5<br>
+                        CSS3 | SASS<br>
+                        JavaScript | React
+                    </p>
+                </div>
+
+                <div class="card">
+                    <i class="fas fa-server"></i>
+                    <h3>Server</h3>
+                    <p>Flask<br>
+                       Node JS
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database</h3>
+                    <p>MySQL<br>
+                    </p>
+                </div>
+                <div class="card">
+                    <i class="far fa-object-group"></i>
+                    <h3>Design</h3>
+                    <p>
+                        Responsive Design<br>
+                        Neumorphism Design<br>
+                        Single Page Application<br>
+                        SEO (semantic elements)<br>
+                        Object-Oriented
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="projects" id="projects">
+            <div class="heading">
+                <h1>Project Portfolio</h1>
+                <h4>My latest work</h4>
+            </div>
+
+            <div class="content">
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <div class="box">
+                            <h3>Portfolio Website</h3>
+                            <p>The website you are currently seeing right now.
+                                It is responsive and mobile-friendly</p>
+                            <div class="lang-icon-container">
+                                <div class="languages">HTML5<hr>
+                                    CSS3<hr>
+                                    JavaScript
+                                </div>
+                                <i class="far fa-address-book"></i>
+                            </div>
+                            <a href="#" class="src-code-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <div class="box">
+                            <h3>COVID-19 Research Dataset Challenge </h3>
+                            <p>A search engine built by building an inverted file index for a corpus of 50K JSON COVID-19 scholarly articles</p>
+                            <div class="lang-icon-container">
+                                <div class="languages">C++<hr>
+                                </div>
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <a href="https://github.com/akoo1/COVID-19-Open-Research-Dataset-Challenge" class="src-code-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="outer-card">
+                    <div class="inner-card">
+                        <div class="box">
+                            <h3>Sentiment Analyzer</h3>
+                            <p>A classification algorithm written using word frequency analysis to predict the sentiment of a dataset of tweets</p>
+                            <div class="lang-icon-container">
+                                <div class="languages">C++<hr>
+                                </div>
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                            <a href="#" class="src-code-btn">Source Code</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+<!--        <section class="testimonial" id="testimonial">-->
+<!--            <div class="heading">-->
+<!--                <h2>Testimonial</h2>-->
+<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>-->
+<!--            </div>-->
+<!--            <div class="content">-->
+<!--                <article class="testimonial-X">-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
+<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
+<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
+<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
+<!--                </article>-->
+<!--                <article class="testimonial-X">-->
+<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
+<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
+<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
+<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
+<!--                </article>-->
+<!--            </div>-->
+<!--        </section>-->
+
+
+        <section class="contact" id="contact">
+            <div class="heading">
+                <h2>Contact Me</h2>
+            </div>
+
+            <div class="content">
+
+                <div class="contact-info">
+                    <div class="contact-info-box">
+                        <div class="box">
+                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <p>2001 E Spring Creek PKWY,<br>Plano, Texas,<br>75074</p>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><i class="fas fa-phone"></i></div>
+                            <p>469-925-6512</p>
+                        </div>
+                        <div class="box">
+                            <div class="icon"><i class="fas fa-envelope"></i></div>
+                            <p>akoo@smu.edu</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="social-media">
+                        <a href="https://github.com/akoo1" target="_blank"> <i class="fab fa-github-square"></i> </a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank"> <i class="fab fa-linkedin"></i> </a>
+                        <a href="https://www.facebook.com/profile.php?id=100002474671692" target="_blank"> <i class="fab fa-facebook-square"></i> </a>
+                        <a href="https://www.instagram.com/kiki40509/?hl=en" target="_blank"> <i class="fab fa-instagram"></i> </a>
+                    </div>
+                </div>
+
+
+                <form>
+                    <h3 class="form-heading">Get in touch</h3>
+                    <div class="field name-field">
+                        <i class="fas fa-user"></i>
+                        <input name="name" type="text" placeholder="Name">
+                    </div>
+                    <div class="field email-field">
+                        <i class="fas fa-envelope"></i>
+                        <input name="name" type="text" placeholder="Email">
+                    </div>
+                    <div class="field message-field">
+                        <i class="fas fa-comment"></i>
+                        <textarea name="name" placeholder="Your Message"></textarea>
+                    </div>
+                    <input class="field send-btn" value="send" type="button">
+                </form>
+            </div>
+
+        </section>
+
+        <footer class="copyright">
+            <p>Copyright &copy; 2020 Alfred. All Right Reserved</p>
+        </footer>
+
+
+    </div>
+
+
+
+
+
+
+    <script>
+        // -- Responsive nav bar --
+        document.getElementsByClassName('hamburger')[0].addEventListener('click', hamburger_clicked)
+        // Another way to select elements
+        // document.querySelector('.hamburger').addEventListener('click', hamburger_clicked)
+
+        function hamburger_clicked() {
+            var x = document.getElementById('my-nav-bar')
+
+            if (!x.classList.contains('responsive')) {
+                x.classList.add('responsive')
+            }
+            else {
+                x.classList.remove('responsive')
+            }
+        }
+
+        // -- Add new class name to nav bar when scroll down --
+        window.addEventListener('scroll', function () {
+            var nav_bar = document.querySelector('.nav-bar')
+            nav_bar.classList.toggle('sticky', window.scrollY > 0)
+        })
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,669 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* All icons' color */
+i {
+    color: #659cbf;
+}
+
+/*!* bg color for black sections *!*/
+/*background-color: #2b2b2b;*/
+/*!* bg color fr white section *!*/
+/*background-color: #efefef;*/
+/*!* font color *!*/
+/*color: rgba(43, 33, 61, 0.85);*/
+
+.grid-container {
+    grid-template-areas: 'Nav'
+                         'Banner'
+                         'About'
+                         'Skills'
+                         'Projects'
+                         'Testimonial'
+                         'Contact'
+                         'Footer';
+}
+
+/* flexbox container */
+.nav-bar {
+    grid-area: Nav;
+    background-color: #2b2b2b;
+
+    display: flex;
+    align-items: center;
+    /* Fixed nav-bar */
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    /* This creates the effect that the nav bar grows */
+    transition: all 0.5s ease-in-out;
+    padding: 20px 40px;
+
+    border-radius: 0 0 4px 4px;
+}
+.nav-bar.sticky {
+    background-color: #efefef;
+    /* This creates the effect that the nav bar shrinks */
+    padding: 0 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    /* Using margin for nav item instead of padding size allows the hover effect to appear right below the element */
+    margin: 15px 20px;
+    border-radius: 4px;
+    /* In order for the hover effect to work */
+    position: relative;
+}
+.nav-bar.sticky a {
+    color: rgb(43, 33, 61);
+    /* Decrease the nav items size when scroll down */
+    margin: 12px 20px;
+}
+.nav-bar a.logo {
+    /* There's no justify-self in flexbox, this is the workaround to justify a single flexbox item */
+    /* This also pushes the rest of the nav links to the end, so justify-content: flex-end; is not needed in thi case */
+    margin-right: auto;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: 'Major Mono Display', monospace;
+}
+
+/* HOVER EFFECT on nav links */
+/* Create pseudo-elements. Position a blue bar right below each nav links Another hard-coded bar */
+.nav-bar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    bottom: -5px;
+    background-color: #efefef;
+    border-radius: 12px;
+    /* To make it not display at first */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.5s ease-in-out;
+}
+.nav-bar.sticky a::before {
+    background-color: rgba(43, 33, 61, 0.85);
+}
+.nav-bar a:hover::before {
+    transform: scale(1);
+}
+/* The logo and hamburger are not suppose to have hover effects */
+.nav-bar a.hamburger:hover::before,
+.nav-bar a.logo:hover::before {
+    transform: scale(0);
+}
+
+
+
+
+.nav-bar .hamburger {
+    display: none;
+}
+/* Hamburger ANIMATION */
+/* Making one bar */
+.nav-bar .hamburger-btn {
+    width: 31px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+/* Making 2 more bars, 1 before, 1 after */
+.nav-bar .hamburger-btn::before,
+.nav-bar .hamburger-btn::after {
+    content: '';
+    position: absolute;
+
+    width: 31px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+}
+.nav-bar.sticky .hamburger-btn,
+.nav-bar.sticky .hamburger-btn::before,
+.nav-bar.sticky .hamburger-btn::after {
+    background-color: black;
+}
+
+/* Position the two bars */
+.nav-bar .hamburger-btn::before {
+    transform: translateY(-10px);
+}
+.nav-bar .hamburger-btn::after {
+    transform: translateY(10px);
+}
+/* ANIMATION (when the hamburger is clicked) */
+.nav-bar.responsive .hamburger-btn {
+    transform: translateX(-30px);
+    background: transparent;
+}
+.nav-bar.responsive .hamburger-btn::before {
+    transform: rotate(45deg) translate(20px, -20px);
+}
+.nav-bar.responsive .hamburger-btn::after {
+    transform: rotate(-45deg) translate(20px, 20px);
+}
+
+
+/* Responsive */
+@media screen and (max-width: 860px) {
+
+    .nav-bar a:not(.logo) {
+        display: none;
+    }
+    .nav-bar a.hamburger {
+        display: block;
+        margin: 0;
+        /* This makes the whole hamburger clickable, not just the three thin bars */
+        padding: 20px;
+    }
+    .nav-bar,
+    .nav-bar.sticky {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+/* When the hamburger is clicked */
+@media screen and (max-width: 860px) {
+    .nav-bar.responsive {
+        flex-direction: column;
+    }
+    .nav-bar.responsive a:not(.logo) {
+        text-align: center;
+    }
+
+    .nav-bar.responsive a:not(.hamburger) {
+        /* To override the display: none; so the links reappear */
+        display: block;
+        width: 100%;
+    }
+    .nav-bar.responsive a.hamburger {
+        /* Setting a position to an element allows us to use top, bottom, left, and right to move an element,
+           which are useful when we want to position an element relative to a container, ex. Hamburger in a
+           nav-bar needs to be at the top right corner of the container */
+        position: absolute;
+        top: 34px;
+        right: 16px;
+    }
+    /* The hamburger will move a bit when nav-bar size gets larger */
+    .nav-bar.responsive.sticky a.hamburger {
+        top: 11px;
+        right: 16px;
+    }
+}
+
+
+
+
+
+
+
+.banner {
+    grid-area: Banner;
+    background-color: #2b2b2b;
+    color: white;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+.banner .heading {
+    margin-left: 100px;
+    margin-top: 200px;
+    width: 500px;
+}
+.banner .logo {
+    font-weight: 700;
+    font-size: 400px;
+    font-family: 'Major Mono Display', monospace;
+    color: #2b2b2b;
+
+    filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3))
+            drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2))
+            drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2))
+
+
+}
+.banner h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.banner h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+.banner .about-me-btn {
+    /* When the btn is an inline-block, inline -> the element only take up as much as width as it needs, block -> allows us to change the size of it */
+    display: inline-block;
+    background-color: rgba(2, 133, 193, 0.88);
+    color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.banner .about-me-btn:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+.about-me {
+    grid-area: About;
+    min-height: 110vh;
+    background-color: #efefef;
+    color: rgba(43, 33, 61, 0.9)
+}
+.about-me .heading {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 30px;
+    font-size: 20px;
+}
+/* flexbox container */
+.about-me .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.about-me .content-text {
+    max-width: 650px;
+    padding: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.about-me .content-img {
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+/* Responsive */
+@media screen and (max-width: 1000px){
+    .about-me .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+.skills {
+    grid-area: Skills;
+    display: flex;
+    justify-content: center;
+    /* This makes sure the section will be at least the viewport height, but extend when items stack on top of each other */
+    min-height: 110vh;
+    background-color: #2b2b2b;
+    color: rgba(255, 255, 255, 0.93);
+}
+/* flexbox container */
+.skills .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.skills .card {
+    height: 320px;
+    width: 220px;
+    margin: 30px;
+
+    background-color: #2b2b2b;
+    box-shadow:  20px 20px 17px #252525,
+                -20px -20px 17px #313131;
+    border-radius: 15px;
+}
+/* Change the shape of the cards on hover */
+.skills .card:hover {
+    box-shadow: inset 20px 20px 10px #252525,
+                inset -20px -20px 10px #313131;
+}
+.skills .card i {
+    font-size: 60px;
+    margin: 40px 0;
+}
+.skills .card h3 {
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+/*Responsive*/
+@media screen and (max-width: 1000px) {
+    .skills .content {
+        padding: 60px 0;
+    }
+    .skills .card {
+        width: 300px;
+    }
+}
+
+
+
+
+.projects {
+    grid-area: Projects;
+    min-height: 110vh;
+    background-color: #efefef;
+    color: rgb(43, 33, 61);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.projects .heading {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.projects .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 40px 0;
+}
+/* This creates a "flat card" */
+.projects .content .outer-card {
+    position: relative;
+    width: 320px;
+    height: 440px;
+    margin: 20px;
+
+    border-radius: 27px;
+    background: #efefef;
+    box-shadow: 6px 6px 12px #c9c9c9,
+                -6px -6px 12px #ffffff;
+}
+/* This creates a "pressed card" */
+.projects .content .inner-card {
+    /* This makes all sides of the inner-card 12px away from the outer-card */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+
+    border-radius: 16px;
+    box-shadow: inset 6px 6px 12px #c9c9c9,
+                inset -6px -6px 12px #ffffff;
+}
+.projects .content .inner-card .box {
+    /* This makes all sides of the box 20px away from the inner-card, thus, the box size will change based on the card size */
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+
+    text-align: center;
+    border-radius: 16px;
+    transition: 0.4s;
+}
+.projects .content .inner-card .box:hover {
+    transform: translateY(-40px) scale(1.05);
+    box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
+    background-color: #f8f8f8; /* A bit whiter than the bg */
+}
+
+/* All children selector */
+.projects .content .inner-card .box > * {
+    margin: 10px 15px;
+}
+.projects .content .inner-card .box h3 {
+    height: 60px;
+    margin-top: 30px;
+}
+.projects .content .inner-card .box p {
+    height: 130px;
+    font-size: 17px;
+}
+.projects .content .inner-card .box .lang-icon-container {
+    display: flex;
+}
+.projects .content .inner-card .box .languages {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.projects .content .inner-card .box i {
+    font-size: 60px;
+    margin: 10px auto 0;
+}
+.projects .content .inner-card .box hr {
+    opacity: 0.6;
+}
+/* This creates a "convex button". Outwards */
+.projects .content .inner-card .box .src-code-btn {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    border-radius: 13px;
+    background: linear-gradient(145deg, #daf6ff, #b8cfd8);
+    box-shadow:  5px 5px 8px #b6c6cc,
+                -5px -5px 8px #f6ffff;
+}
+/* This creates a "concave button". Inwards */
+.projects .content .inner-card .box .src-code-btn:hover {
+    background: linear-gradient(145deg, #b8cfd8, #daf6ff);;
+    box-shadow:  5px 5px 8px #b6c6cc,
+                -5px -5px 8px #f6ffff;
+}
+
+
+
+
+
+
+.testimonial {
+    grid-area: Testimonial;
+    min-height: 100vh;
+    border: 1px solid black;
+}
+.testimonial .heading {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
+    padding-bottom: 25px;
+}
+.testimonial .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonial .content .testimonial-X {
+    max-width: 500px;
+    
+    margin: 30px;
+    padding: 60px 40px;
+    background-color: #2196f3;
+}
+.testimonial .content .testimonial-X p {
+    color: white;
+    font-style: italic;
+    font-weight: 300;
+}
+.testimonial .content .testimonial-X h3 {
+    color: white;
+    margin-top: 40px;
+    text-align: end;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1;
+}
+.testimonial .content .testimonial-X span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+.contact {
+    grid-area: Contact;
+    min-height: 110vh;
+    background-color: #2b2b2b;
+    color: white;
+}
+.contact .heading {
+    width: 100%;
+    text-align: center;
+    padding: 100px 0 60px;
+    font-size: 20px;
+}
+
+
+.contact .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 60%;
+}
+.contact form .form-heading {
+    margin-bottom: 5px;
+    margin-right: 450px;
+    font-weight: 400;
+}
+
+/* Styling the form fields */
+.contact form .field {
+    margin: 8px 0;
+}
+.contact form .name-field input,
+.contact form .email-field input,
+.contact form .message-field textarea {
+    width: 600px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 12px;
+    outline: none;
+    color: white;
+    resize: none;
+    
+    background-color: #2b2b2b;
+    box-shadow: inset 20px 10px 15px #252525,
+                inset -20px -10px 15px #313131;
+}
+.contact form .name-field input {
+    margin-left: 12px;
+}
+.contact form .email-field input {
+    margin-left: 10px;
+}
+.contact form .message-field i {
+    margin-top: 16px;
+}
+.contact form .message-field textarea {
+    margin-left: 14px;
+    min-height: 200px;
+}
+.contact form .message-field {
+    display: flex;
+}
+
+.contact form .send-btn {
+    width: 80px;
+    padding: 16px 24px;
+    background-color: rgba(2, 133, 193, 0.88);
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+.contact form .send-btn:hover {
+    background-color: rgba(6, 102, 146, 0.88);
+
+}
+
+
+.contact-info {
+    margin-bottom: 60px;
+    margin-left: 80px;
+}
+.contact-info .box {
+    display: flex;
+    padding: 20px 0;
+}
+.contact-info .box .icon {
+    padding: 0 25px;
+}
+.contact-info .box hr {
+    width: 300px;
+    margin: 20px 0;
+    opacity: 0.3;
+}
+.social-media {
+    margin: 40px;
+    margin-left: 10px;
+    /*padding: 25px;*/
+    text-align: center;
+
+    /*border-radius: 8px;*/
+    /*background-color: #2b2b2b;*/
+    /*box-shadow: 20px 10px 28px #252525,*/
+    /*            -20px -10px 28px #313131;*/
+}
+.social-media i {
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.86);
+    margin: 0 5px;
+    text-align: center;
+}
+.social-media i:hover {
+    transform: scale(1.2);
+}
+/* To remove the weird little color bars between the icons */
+.social-media a {
+    color: transparent;
+}
+
+
+
+.copyright {
+    grid-area: Footer;
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    padding: 100px 0 20px;
+}
+
+
