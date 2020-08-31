@@ -4,14 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Portfolio Website | Alfred K </title>
 
     <!-- Our CSS style -->
     <link href="style.css" rel="stylesheet">
+    <!-- Our JS file   -->
+    <script src="main.js" async></script>
     <!-- Google fonts for logo -->
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
     <!-- Fontawesome icons -->
     <script src="https://kit.fontawesome.com/c838459338.js" crossorigin="anonymous"></script>
-    <title> Personal Portfolio Website | Alfred K </title>
 </head>
 
 <!-- Add a feature that makes the nav link active when at its section -->
@@ -246,30 +248,6 @@
 
 
     <script>
-        // -- Responsive nav bar --
-        document.getElementsByClassName('hamburger')[0].addEventListener('click', hamburger_clicked)
-        // Another way to select elements
-        // document.querySelector('.hamburger').addEventListener('click', hamburger_clicked)
-
-        function hamburger_clicked() {
-            var x = document.getElementById('my-nav-bar')
-
-            if (!x.classList.contains('responsive')) {
-                x.classList.add('responsive')
-            }
-            else {
-                x.classList.remove('responsive')
-            }
-        }
-
-        // -- Add new class name to nav bar when scroll down --
-        window.addEventListener('scroll', function () {
-            var nav_bar = document.querySelector('.nav-bar')
-            nav_bar.classList.toggle('sticky', window.scrollY > 0)
-        })
-
-
-
 
     </script>
 

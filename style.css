@@ -198,12 +198,12 @@ i {
            which are useful when we want to position an element relative to a container, ex. Hamburger in a
            nav-bar needs to be at the top right corner of the container */
         position: absolute;
-        top: 34px;
+        top: 32px;
         right: 16px;
     }
     /* The hamburger will move a bit when nav-bar size gets larger */
     .nav-bar.responsive.sticky a.hamburger {
-        top: 11px;
+        top: 9px;
         right: 16px;
     }
 }
