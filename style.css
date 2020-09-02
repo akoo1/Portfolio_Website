@@ -97,7 +97,7 @@ i {
     transition: all 0.5s ease-in-out;
 }
 .nav-bar.sticky a::before {
-    background-color: rgba(43, 33, 61, 0.85);
+    background: rgba(43, 33, 61, 0.85);
 }
 .nav-bar a:hover::before {
     transform: scale(1);
@@ -304,7 +304,7 @@ i {
     align-items: center;
 }
 .about-me .content-text {
-    max-width: 650px;
+    max-width: 550px;
     padding: 30px;
     font-size: 18px;
     line-height: 1.6;
@@ -353,11 +353,11 @@ i {
 }
 .skills .card i {
     font-size: 60px;
-    margin: 40px 0;
+    margin: 40px 0 20px;
 }
 .skills .card h3 {
     text-transform: uppercase;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 /*Responsive*/
 @media screen and (max-width: 1000px) {
