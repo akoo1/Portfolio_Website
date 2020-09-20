@@ -1,0 +1,61 @@
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: all .2s;
+
+    &:active {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(black, 0.21);
+    }
+
+
+    &--about-me {
+        background: $btn-bg-color-sky-blue-gradient;
+        display: inline-block;
+        color: $btn-font-color;
+        margin-top: 20px;
+        padding: 10px 30px;
+        
+        &:hover {
+            // transform: scale(1.05);
+            transform: translateY(-0.3rem);
+            box-shadow: 0 1rem 2rem rgba(black, 0.21);
+        }
+    }
+
+    &--src-code {
+        /* This creates a "convex button". Outwards */
+        background: linear-gradient(145deg, #daf6ff, #b8cfd8);
+        box-shadow:  5px 5px 8px #b6c6cc,
+                    -5px -5px 8px #f6ffff;
+        color: $btn-font-color;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 13px;
+        
+        &:hover {
+            /* This creates a "concave button". Inwards */
+            background: linear-gradient(145deg, #b8cfd8, #daf6ff);
+            box-shadow:  5px 5px 8px #b6c6cc,
+                        -5px -5px 8px #f6ffff;
+        }
+    }
+
+    &--send-message {
+        background-color: darken($icon_color_main, 10%);
+        color: $font-color-light;
+        width: 80px;
+        padding: 16px 24px;
+        cursor: pointer;
+        border: none;
+
+        &:hover {
+            background-color: darken($icon_color_main, 20%);
+        }
+    }
+
+
+}

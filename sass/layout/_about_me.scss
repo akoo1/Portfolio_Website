@@ -1,0 +1,36 @@
+
+.about-me {
+    grid-area: About;
+    min-height: 110vh;
+    background-color: $background-color-light;
+    color: $font_color-dark;
+    
+
+    &__heading-box {
+        width: 100%;
+        text-align: center;
+        padding: 100px 0 30px;
+        font-size: 20px;
+    }
+
+    &__content-box {
+        @include flex_center;        
+        flex-wrap: wrap;
+
+        &--text-box {
+            max-width: 550px;
+            padding: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        &--img-box {
+            margin: 50px;
+
+            .img-roof-top {
+                border-radius: 12px;
+            }
+        }
+    }
+
+
+}

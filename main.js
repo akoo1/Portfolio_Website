@@ -1,4 +1,4 @@
-
+3
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 }
@@ -8,7 +8,7 @@ else {
 
 function ready() {
     // -- Responsive nav bar --
-    document.getElementsByClassName('hamburger')[0].addEventListener('click', hamburger_clicked)
+    document.getElementsByClassName('nav-bar__link--hamburger')[0].addEventListener('click', hamburger_clicked)
     // Another way to select elements
     // document.querySelector('.hamburger').addEventListener('click', hamburger_clicked)
 
@@ -21,7 +21,7 @@ function ready() {
             x.classList.remove('responsive')
         }
     }
-
+    console.log('GGoby')
     // -- Add new class name to nav bar when scroll down --
     window.addEventListener('scroll', function () {
         var nav_bar = document.querySelector('.nav-bar')

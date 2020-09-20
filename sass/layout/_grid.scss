@@ -1,0 +1,13 @@
+
+
+.grid-container {
+    grid-template-areas: 'Header'
+                         'Banner'
+                         'About'
+                         'Skills'
+                         'Projects'
+                         'Testimonial'
+                         'Contact'
+                         'Footer';
+}
+

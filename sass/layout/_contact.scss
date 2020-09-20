@@ -1,0 +1,129 @@
+
+.contact {
+    grid-area: Contact;
+
+    min-height: 110vh;
+    background-color: $background_color-dark;
+    color: $font_color-light;
+
+
+    &__heading-box {
+        width: 100%;
+        text-align: center;
+        padding: 100px 0 60px;
+        font-size: 20px;
+    }
+
+    &__content-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        .contact-info-box {
+            margin-bottom: 60px;
+            margin-left: 80px;
+
+            &__sm-box {
+                display: flex;
+                padding: 20px 0;
+
+                .icon {
+                    color: $icon_color-main;
+                    padding: 0 25px;
+                }
+            }
+            &__social-media-hr {
+                width: 300px;
+                margin: 20px 0;
+                opacity: 0.3;
+            }
+
+            &__social-media-box {
+                margin: 40px;
+                margin-left: 10px;
+                text-align: center;
+
+                /* To remove the weird little color bars between the icons */
+                a {
+                    color: transparent;
+                }
+                .social-media-icon {
+                    font-size: 36px;
+                    color: $icon_color-light;
+                    margin: 0 5px;
+                    text-align: center;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+        }
+
+        .email-form {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            &__heading {
+                margin-bottom: 5px;
+                margin-right: 450px;
+                font-weight: 400;
+
+                @media (max-width: 700px) {
+                    margin-right: 250px;
+                }
+            }
+
+            &__field {
+                margin: 8px 0;
+
+                &--name input,
+                &--email input,
+                &--message textarea {
+                    width: 600px;
+                    padding: 15px;
+                    font-size: 16px;
+                    border: none;
+                    border-radius: 12px;
+                    outline: none;
+                    color: white;
+                    resize: none;
+                    
+                    background-color: #2b2b2b;
+                    box-shadow: inset 20px 10px 15px #252525,
+                                inset -20px -10px 15px #313131;
+
+
+                    /* Responsive */
+                    @media (max-width: 700px) {
+                        width: 400px;
+                    }
+                }
+
+                &--name input {
+                    margin-left: 12px;
+                }
+                &--email input {
+                    margin-left: 10px;
+                }
+                &--message textarea {
+                    margin-left: 14px;
+                    min-height: 200px;
+                }
+                &--message-field i {
+                    padding-top: 35px;
+                }
+                &--message {
+                    display: flex;
+                }
+                i {
+                    color: $icon_color-main;
+                }
+            }
+        }
+
+    }
+
+}
