@@ -27,15 +27,5 @@
 
 
 // Good CSS architecture and design pattern
-
 // Follow the BEM (Block Element Modifier) methodology for naming convention
-
 // - Break CSS code down into 4 categories: base, layout, components, and state.
-// - Assume as little HTML structure as possible.
-// - Don't modify elements based on their parent elements, treat them as independent components,
-//   those elements should look as they’re defined regardless of where they appear in the HTML.
-// - The CSS defines what your components look like, and the HTML assigns those looks to the elements on the page,
-//   declaring exactly what you want in the HTML.
-// - The less the CSS needs to know about the HTML structure the better.(little CSS selector nesting)  
-// - Overly generic class names lead to very unpredictable CSS.
-// - Separate styling properties from positioning properties.  

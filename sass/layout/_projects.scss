@@ -15,7 +15,7 @@
     &__content-box {
         @include flex_center;
         flex-wrap: wrap;
-        margin: 40px 0;
+        padding: 40px 0;
     }
 }
 
