@@ -430,8 +430,8 @@ html {
 }
 
 .banner__heading-box {
-  margin-left: 100px;
-  margin-top: 200px;
+  margin-left: 150px;
+  margin-top: 100px;
   width: 500px;
   /* z-index only works for positioned elements.
         This increases the "stack order" of the heading, thus it appears on top of the huge logo now */
