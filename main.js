@@ -21,11 +21,9 @@ function ready() {
             x.classList.remove('responsive')
         }
     }
-    console.log('GGoby')
-    // -- Add new class name to nav bar when scroll down --
-    window.addEventListener('scroll', function () {
-        var nav_bar = document.querySelector('.nav-bar')
-        nav_bar.classList.toggle('sticky', window.scrollY > 0)
+    // -- Add class name 'sticky' to nav bar when scroll down --
+    window.addEventListener('scroll', () => {
+        document.querySelector('.nav-bar').classList.toggle('sticky', window.scrollY > 0)
     })
 
 }
