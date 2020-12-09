@@ -48,9 +48,11 @@
         background-color: darken($icon_color_main, 10%);
         color: $font-color-light;
         width: 80px;
-        padding: 16px 24px;
+        margin-top: 1rem;
+        padding: 10px 20px;
         cursor: pointer;
         border: none;
+        border-radius: 0.3rem;
 
         &:hover {
             background-color: darken($icon_color_main, 20%);

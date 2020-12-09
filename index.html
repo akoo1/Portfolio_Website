@@ -1,299 +1,338 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website | Alfred K</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="./sass/main.css" rel="stylesheet">
-    <script src="main.js" async></script>
-    <!-- Google fonts for logo -->
-    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
-    <!-- Fontawesome icons CDN -->
-    <script src="https://kit.fontawesome.com/c838459338.js" crossorigin="anonymous"></script>
-</head>
+		<link rel="icon" href="logo.png" />
+		<link rel="apple-touch-icon" href="logo.png" />
 
-<!-- Add a feature that makes the nav link active when at its section -->
+		<title>Alfred Koo | Front End Engineer</title>
 
-<body>
-    <div class="grid-container">
+		<link href="./sass/main.css" rel="stylesheet">
+		<script src="main.js" async></script>
+		<!-- Google fonts for logo -->
+		<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+		<!-- Fontawesome icons CDN -->
+		<script src="https://kit.fontawesome.com/c838459338.js" crossorigin="anonymous"></script>
+	</head>
 
-        <header class="header">
-            <nav class="nav-bar" id="my-nav-bar">
-                <a class="nav-bar__link nav-bar__link--logo" href="#banner">AK</a>
-                <a class="nav-bar__link" href="#banner" >Home</a>
-                <a class="nav-bar__link" href="#about-me" >About</a>
-                <a class="nav-bar__link" href="#skills">Skills</a>
-                <a class="nav-bar__link" href="#projects">Projects</a>
-                <a class="nav-bar__link" href="#contact">Contact</a>
-                <a class="nav-bar__link nav-bar__link--hamburger" href="javascript:void(0)"><div class="hamburger-btn"></div></a>
-            </nav>
-        </header>
-        
+	<!-- Add a feature that makes the nav link active when at its section -->
 
-        <section class="banner" id="banner">
-            <div class="banner__heading-box">
-                <h2>Hey there, I'm<br><span>Alfred Koo</span></h2>
-                <h3>I'm a Computer Science major<br> who enjoys learning new technologies.</h3>
-                <a href="#about-me" class="btn btn--about-me">About Me</a>
-            </div>
-            <h1 class="banner__logo">AK</h1>
-        </section>
+	<body>
+		<div class="grid-container">
 
-        <section class="about-me" id="about-me">
-            <div class="about-me__heading-box">
-                <h1>Let me Introduce Myself</h1>
-            </div>
-            <div class="about-me__content-box">
-                <div class="about-me__content-box--text-box">
-                    Hello good humans, I'm a passionate undergraduate Computer Science major in my junior year at Southern Methodist University.<br><br>
-                    I enjoy web development, especially the front end because I love the artistic side of programming as well, and I'm always eager to learn new technologies
-                    in other areas as well as learn from more talented engineers.<br><br>
-                    I have experience with full stack web appications and data analytics. My strengths lie in my CSS/Sass, <br>React JS, and Python skills.<br><br>
-                    Currently looking for an<b> internship </b>to further pursue my passion for <b>software development</b> through gaining hands-on experience in the real world.<br><br>
-                    I have a broad range of interests, from technology, to break dancing, to basketball and beyond (I'm actually a long time Mavericks fan! Let's Go Mavs!)
-                </div>
-                <div class="about-me__content-box--img-box">
-                    <img class="img-roof-top" src="images/rooftop.jpg" alt="rooftop" width="400" height="450">
-                </div>
-            </div>
-        </section>
+			<header class="header">
+				<nav class="nav-bar" id="my-nav-bar">
+					<a class="nav-bar__link nav-bar__link--logo" href="#banner">AK</a>
+					<a class="nav-bar__link" href="#banner">Home</a>
+					<a class="nav-bar__link" href="#about-me">About</a>
+					<a class="nav-bar__link" href="#skills">Skills</a>
+					<a class="nav-bar__link" href="#projects">Projects</a>
+					<a class="nav-bar__link" href="#contact">Contact</a>
+					<a class="nav-bar__link nav-bar__link--hamburger" href="javascript:void(0)">
+						<div class="hamburger-btn"></div>
+					</a>
+				</nav>
+			</header>
 
 
-        <section class="skills" id="skills">
-            <div class="skills__content-box">
-                <div class="skills-card">
-                    <i class="skills-card__icon far fa-window-restore"></i>
-                    <h3 class="skills-card__heading">Front-End</h3>
-                    <p class="skills-card__text">
-                        HTML5<br>
-                        CSS3 | Sass<br>
-                        JavaScript | React
-                    </p>
-                </div>
-                <div class="skills-card">
-                    <i class="skills-card__icon fas fa-server"></i>
-                    <h3 class="skills-card__heading">Server</h3>
-                    <p class="skills-card__text">
-                        Flask
-                    </p>
-                </div>
-                <div class="skills-card">
-                    <i class="skills-card__icon fas fa-database"></i>
-                    <h3 class="skills-card__heading">Database</h3>
-                    <p class="skills-card__text">
-                        SQLite<br>
-                        SQLAlchemy
-                    </p>
-                </div>
-                <div class="skills-card">
-                    <i class="skills-card__icon fas fa-code"></i>
-                    <h3 class="skills-card__heading">Others</h3>
-                    <p class="skills-card__text">
-                        Git | Github<br>
-                        Python, C++<br>
-                        Object-Oriented-<br>
-                        Programming<br>
-                        Heroku
-                    </p>
-                </div>
-            </div>
-        </section>
+			<section class="banner" id="banner">
+				<div class="banner__heading-box">
+					<h2>Hey there, I'm<br><span>Alfred Koo</span></h2>
+					<h3>I'm a Computer Science major<br> who enjoys learning new technologies.</h3>
+					<a href="#about-me" class="btn btn--about-me">About Me</a>
+				</div>
+					<h1 class="banner__logo">AK</h1>
+			</section>
+
+			<section class="about-me" id="about-me">
+				<div class="about-me__heading-box">
+					<h1>
+						FRONT END FOCUSED<br>
+						WITH FULL STACK EXPERIENCE
+					</h1>
+				</div>
+				<div class="about-me__content-box">
+					<div class="about-me__content-box--text-box">
+						Hello good humans, I'm a passionate undergraduate Computer Science major in my junior year at Southern
+						Methodist University.
+						<br><br>
+						I have experience with full stack web applications and data analytics. My strengths lie in my <b>CSS/Sass</b>,
+						<br><b>React JS</b>, and <b>Python</b> skills.<br><br>
+						I'm always eager to learn new technologies in other areas as well as learn from more talented
+						engineers.
+						<br><br>
+						Currently looking for an<b> internship </b>to further pursue my passion for <b>software development</b>
+						through gaining hands-on experience in the real world.
+						<br><br>
+						I have a broad range of interests, from technology, to photography, to basketball and beyond!
+					</div>
+					<div class="about-me__content-box--img-box">
+						<img class="img-roof-top" src="images/rooftop.jpg" alt="rooftop" width="350" height="400">
+					</div>
+				</div>
+			</section>
 
 
-
-
-        <section class="projects" id="projects">
-            <div class="projects__heading-box">
-                <h1>Project Portfolio</h1>
-                <h4>My latest work</h4>
-            </div>
-
-            <div class="projects__content-box">
-
-                <div class="project__card">
-                    <div class="project__card__inner-card">
-                        <div class="project__card__inner-card__text-box">
-                            <h3 class="project-title">Portfolio Website</h3>
-                            <p class="project-description">The website you are currently seeing right now.
-                                It is responsive and mobile-friendly</p>
-                            <div class="tech-stack-box">
-                                <div class="tech-stack-box__languages-box">
-                                    HTML5<hr>
-                                    CSS3|SASS<hr>
-                                    JavaScript
-                                </div>
-                                <i class="tech-stack-box__icon far fa-address-book"></i>
-                            </div>
-                            <a class="btn btn--src-code" href="https://github.com/akoo1/Portfolio-Website" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__card">
-                    <div class="project__card__inner-card">
-                        <div class="project__card__inner-card__text-box">
-                            <h3 class="project-title">Algorithm Analyzer</h3>
-                            <p class="project-description">An algorithm class that utilizes strategy design pattern to perform
-                                various sorting and searching algorithms</p>
-                            <div class="tech-stack-box">
-                                <div class="tech-stack-box__languages-box">
-                                    C++<hr>
-                                </div>
-                                <i class="tech-stack-box__icon fas fa-atom"></i>
-                            </div>
-                            <a class="btn btn--src-code" href="https://github.com/akoo1/Algorithm-Analyzer" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__card">
-                    <div class="project__card__inner-card">
-                        <div class="project__card__inner-card__text-box">
-                            <h3 class="project-title">COVID-19 Research Dataset Challenge </h3>
-                            <p class="project-description">A search engine built by building an inverted file index for a corpus of 50K JSON COVID-19 scholarly articles</p>
-                            <div class="tech-stack-box">
-                                <div class="tech-stack-box__languages-box">
-                                    C++<hr>
-                                </div>
-                                <i class="tech-stack-box__icon fas fa-shield-virus"></i>
-                            </div>
-                            <a class="btn btn--src-code" href="https://github.com/akoo1/COVID-19-Open-Research-Dataset-Challenge" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__card">
-                    <div class="project__card__inner-card">
-                        <div class="project__card__inner-card__text-box">
-                            <h3 class="project-title">Task Master</h3>
-                            <p class="project-description">A lightweight web app that allows users to manage daily tasks as a to-do-list</p>
-                            <div class="tech-stack-box">
-                                <div class="tech-stack-box__languages-box">
-                                    Flask<hr>
-                                    Jinja<hr>
-                                    SQLite<hr>
-                                    Heroku
-                                </div>
-                                <i class="tech-stack-box__icon fas fa-tasks"></i>
-                            </div>
-                            <a class="btn btn--src-code" href="https://github.com/akoo1/Task-Master" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project__card">
-                    <div class="project__card__inner-card">
-                        <div class="project__card__inner-card__text-box">
-                            <h3 class="project-title">Sentiment Analyzer</h3>
-                            <p class="project-description">A classification algorithm written using word frequency analysis to predict the sentiment of a dataset of tweets</p>
-                            <div class="tech-stack-box">
-                                <div class="tech-stack-box__languages-box">
-                                    C++<hr>
-                                </div>
-                                <i class="tech-stack-box__icon fab fa-twitter"></i>
-                            </div>
-                            <a class="btn btn--src-code" href="https://github.com/akoo1/Sentiment_Analyzer" target="_blank">Source Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-        </section>
-
-
-<!--        <section class="testimonial" id="testimonial">-->
-<!--            <div class="heading">-->
-<!--                <h2>Testimonial</h2>-->
-<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>-->
-<!--            </div>-->
-<!--            <div class="content">-->
-<!--                <article class="testimonial-X">-->
-<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
-<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
-<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
-<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
-<!--                </article>-->
-<!--                <article class="testimonial-X">-->
-<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
-<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
-<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
-<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
-<!--                </article>-->
-<!--            </div>-->
-<!--        </section>-->
-
-
-        <section class="contact" id="contact">
-            <div class="contact__heading-box">
-                <h2>Contact Me</h2>
-            </div>
-
-            <div class="contact__content-box">
-
-                <div class="contact-info-box">
-                    <div>
-                        <div class="contact-info-box__sm-box">
-                            <div class="icon"><i class="fas fa-envelope"></i></div>
-                            <p>akoo@smu.edu</p>
-                        </div>
-                        <div class="contact-info-box__sm-box">
-                            <div class="icon"><i class="fas fa-phone"></i></div>
-                            <p>469-925-6512</p>
-                        </div>
-                        <div class="contact-info-box__sm-box">
-                            <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <p>2001 E Spring Creek PKWY,<br>Plano, Texas,<br>75074</p>
-                        </div>
-                    </div>
-
-                    <hr class="contact-info-box__social-media-hr">
-
-                    <div class="contact-info-box__social-media-box">
-                        <a href="https://github.com/akoo1" target="_blank"> <i class="social-media-icon fab fa-github-square"></i> </a>
-                        <a href="https://www.linkedin.com/feed/" target="_blank"> <i class="social-media-icon fab fa-linkedin"></i> </a>
-                        <a href="https://www.facebook.com/profile.php?id=100002474671692" target="_blank"> <i class="social-media-icon fab fa-facebook-square"></i> </a>
-                        <a href="https://www.instagram.com/kiki40509/?hl=en" target="_blank"> <i class="social-media-icon fab fa-instagram"></i> </a>
-                    </div>
-                </div>
-
-
-                <form class="email-form" autocomplete="off">
-                    <h3 class="email-form__heading">Get in touch</h3>
-                    <div class="email-form__field email-form__field--name">
-                        <i class="form fas fa-user"></i>
-                        <input name="name" type="text" placeholder="Name">
-                    </div>
-                    <div class="email-form__field email-form__field--email">
-                        <i class="fas fa-envelope"></i>
-                        <input name="name" type="email" placeholder="Email">
-                    </div>
-                    <div class="email-form__field email-form__field--message">
-                        <i class="fas fa-comment"></i>
-                        <textarea name="name" placeholder="Your Message"></textarea>
-                    </div>
-                    <input class="email-form__field btn btn--send-message" value="send" type="button">
-                </form>
-            </div>
-        </section>
+			<section class="skills" id="skills">
+				<div class="skills__content-box">
+					<div class="skills-card">
+						<i class="skills-card__icon far fa-window-restore"></i>
+						<h3 class="skills-card__heading">Front-End</h3>
+						<p class="skills-card__text">
+							HTML5<br>
+							CSS3 | Sass<br>
+							JavaScript<br>
+							React
+						</p>
+					</div>
+					<div class="skills-card">
+						<i class="skills-card__icon fas fa-server"></i>
+						<h3 class="skills-card__heading">Server</h3>
+						<p class="skills-card__text">
+							Flask
+						</p>
+					</div>
+					<div class="skills-card">
+						<i class="skills-card__icon fas fa-database"></i>
+						<h3 class="skills-card__heading">Database</h3>
+						<p class="skills-card__text">
+							SQLite<br>
+							SQLAlchemy
+						</p>
+					</div>
+					<div class="skills-card">
+						<i class="skills-card__icon fas fa-code"></i>
+						<h3 class="skills-card__heading">Others</h3>
+						<p class="skills-card__text">
+							Git | Github<br>
+							Python, C++<br>
+							Object-Oriented-<br>
+							Programming<br>
+							Heroku
+						</p>
+					</div>
+				</div>
+			</section>
 
 
 
 
-        <footer class="copyright-box">
-            <p>Copyright &copy; 2020 Alfred. All Right Reserved</p>
-        </footer>
+			<section class="projects" id="projects">
+				<div class="projects__heading-box">
+					<h1>Project Portfolio</h1>
+					<h4>My latest work</h4>
+				</div>
+
+				<div class="projects__content-box">
+
+					<div class="project__card">
+						<div class="project__card__inner-card">
+							<div class="project__card__inner-card__text-box">
+								<h3 class="project-title">Portfolio Website</h3>
+								<p class="project-description">The website you are currently seeing right now.
+									It is responsive and mobile-friendly</p>
+								<div class="tech-stack-box">
+									<div class="tech-stack-box__languages-box">
+										HTML5
+										<hr>
+										CSS3|SASS
+										<hr>
+										JavaScript
+									</div>
+									<i class="tech-stack-box__icon far fa-address-book"></i>
+								</div>
+								<a class="btn btn--src-code" href="https://github.com/akoo1/Portfolio-Website" target="_blank">Source
+									Code</a>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<div class="project__card__inner-card">
+							<div class="project__card__inner-card__text-box">
+								<h3 class="project-title">Algorithm Analyzer</h3>
+								<p class="project-description">An algorithm class that utilizes strategy design pattern to perform
+									various sorting and searching algorithms</p>
+								<div class="tech-stack-box">
+									<div class="tech-stack-box__languages-box">
+										C++
+										<hr>
+									</div>
+									<i class="tech-stack-box__icon fas fa-atom"></i>
+								</div>
+								<a class="btn btn--src-code" href="https://github.com/akoo1/Algorithm-Analyzer" target="_blank">Source
+									Code</a>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<div class="project__card__inner-card">
+							<div class="project__card__inner-card__text-box">
+								<h3 class="project-title">COVID-19 Research Dataset Challenge </h3>
+								<p class="project-description">A search engine built by building an inverted file index for a corpus of
+									50K JSON COVID-19 scholarly articles</p>
+								<div class="tech-stack-box">
+									<div class="tech-stack-box__languages-box">
+										C++
+										<hr>
+									</div>
+									<i class="tech-stack-box__icon fas fa-shield-virus"></i>
+								</div>
+								<a class="btn btn--src-code" href="https://github.com/akoo1/COVID-19-Open-Research-Dataset-Challenge"
+									target="_blank">Source Code</a>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<div class="project__card__inner-card">
+							<div class="project__card__inner-card__text-box">
+								<h3 class="project-title">Task Master</h3>
+								<p class="project-description">A lightweight web app that allows users to manage daily tasks as a
+									to-do-list</p>
+								<div class="tech-stack-box">
+									<div class="tech-stack-box__languages-box">
+										Flask
+										<hr>
+										Jinja
+										<hr>
+										SQLite
+										<hr>
+										Heroku
+									</div>
+									<i class="tech-stack-box__icon fas fa-tasks"></i>
+								</div>
+								<a class="btn btn--src-code" href="https://github.com/akoo1/Task-Master" target="_blank">Source Code</a>
+							</div>
+						</div>
+					</div>
+					<div class="project__card">
+						<div class="project__card__inner-card">
+							<div class="project__card__inner-card__text-box">
+								<h3 class="project-title">Sentiment Analyzer</h3>
+								<p class="project-description">A classification algorithm written using word frequency analysis to
+									predict the sentiment of a dataset of tweets</p>
+								<div class="tech-stack-box">
+									<div class="tech-stack-box__languages-box">
+										C++
+										<hr>
+									</div>
+									<i class="tech-stack-box__icon fab fa-twitter"></i>
+								</div>
+								<a class="btn btn--src-code" href="https://github.com/akoo1/Sentiment_Analyzer" target="_blank">Source
+									Code</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
-    </div>
+			</section>
+
+
+			<!--        <section class="testimonial" id="testimonial">-->
+			<!--            <div class="heading">-->
+			<!--                <h2>Testimonial</h2>-->
+			<!--                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>-->
+			<!--            </div>-->
+			<!--            <div class="content">-->
+			<!--                <article class="testimonial-X">-->
+			<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
+			<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
+			<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
+			<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
+			<!--                </article>-->
+			<!--                <article class="testimonial-X">-->
+			<!--                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do-->
+			<!--                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut-->
+			<!--                        enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>-->
+			<!--                    <h3>Someone famous<br><span>Engineer</span></h3>-->
+			<!--                </article>-->
+			<!--            </div>-->
+			<!--        </section>-->
+
+
+			<section class="contact" id="contact">
+				<div class="contact__heading-box">
+					<h2>Contact Me</h2>
+				</div>
+
+				<div class="contact__content-box">
+
+					<div class="contact-info-box">
+						<div>
+							<div class="contact-info-box__sm-box">
+								<div class="icon"><i class="fas fa-envelope"></i></div>
+								<p>akoo@smu.edu</p>
+							</div>
+							<div class="contact-info-box__sm-box">
+								<div class="icon"><i class="fas fa-phone"></i></div>
+								<p>469-925-6512</p>
+							</div>
+							<div class="contact-info-box__sm-box">
+								<div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+								<p>2001 E Spring Creek PKWY,<br>Plano, Texas,<br>75074</p>
+							</div>
+						</div>
+
+						<hr class="contact-info-box__social-media-hr">
+
+						<div class="contact-info-box__social-media-box">
+							<a href="https://github.com/akoo1" target="_blank"> <i class="social-media-icon fab fa-github-square"></i>
+							</a>
+							<a href="https://www.linkedin.com/feed/" target="_blank"> <i
+									class="social-media-icon fab fa-linkedin"></i> </a>
+							<a href="https://www.facebook.com/profile.php?id=100002474671692" target="_blank"> <i
+									class="social-media-icon fab fa-facebook-square"></i> </a>
+							<a href="https://www.instagram.com/kiki40509/?hl=en" target="_blank"> <i
+									class="social-media-icon fab fa-instagram"></i> </a>
+						</div>
+					</div>
+
+
+					<form class="email-form" autocomplete="off">
+						<h3 class="email-form__heading">Get in touch</h3>
+
+						<div class="email-form__field email-form__field--name">
+							<i class="form fas fa-user"></i>
+							<input name="name" type="text" placeholder="Name">
+						</div>
+
+						<div class="email-form__field email-form__field--email">
+							<i class="fas fa-envelope"></i>
+							<input name="name" type="email" placeholder="Email">
+						</div>
+
+						<div class="email-form__field email-form__field--message">
+							<i class="fas fa-comment"></i>
+							<textarea name="name" placeholder="Your Message"></textarea>
+						</div>
+
+						<button class="btn--send-message" type="button">Send</button>
+					</form>
+				</div>
+			</section>
+
+
+
+
+			<footer class="copyright-box">
+				<p>Copyright &copy; 2020 Alfred. All Right Reserved</p>
+			</footer>
+
+
+		</div>
 
 
 
 
 
 
-    <script>
+		<script>
 
-    </script>
+		</script>
 
-</body>
+	</body>
 
 </html>

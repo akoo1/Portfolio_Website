@@ -54,7 +54,7 @@
             /* There's no justify-self in flexbox, this is the workaround to justify a single flexbox item */
             /* This also pushes the rest of the nav links to the end, so it can act like justify-content: flex-end; in this case */
             margin-right: auto;
-            font-weight: 700;
+            font-weight: bolder;
             font-size: 35px;
             font-family: $logo_font;
     
