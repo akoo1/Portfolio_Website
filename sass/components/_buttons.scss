@@ -2,8 +2,7 @@
 .btn {
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: bold;
-    border-radius: 4px;
+    border-radius: 1rem;
     transition: all .2s;
 
     &:active {
@@ -12,18 +11,29 @@
     }
 
 
-    &--about-me {
-        background: $btn-bg-color-sky-blue-gradient;
+    &--see-project,
+    &--download-resume {
+        background: $background-color-light;
+        color: $font_color-dark;
         display: inline-block;
-        color: $btn-font-color;
-        margin-top: 20px;
-        padding: 10px 30px;
-        
+
+        margin-top: 3rem;
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-align: center;
+
         &:hover {
-            // transform: scale(1.05);
             transform: translateY(-0.3rem);
             box-shadow: 0 1rem 2rem rgba(black, 0.21);
         }
+    }
+
+    &--download-resume {
+        background: $background-color-dark;
+        color: $font_color-light;
+        border: 1px solid $font_color-light;
+        margin-left: 1.5rem;
     }
 
     &--src-code {
@@ -34,7 +44,7 @@
         color: $btn-font-color;
         padding: 10px;
         font-size: 12px;
-        border-radius: 13px;
+        font-weight: bold;
         
         &:hover {
             /* This creates a "concave button". Inwards */
@@ -52,8 +62,7 @@
         padding: 10px 20px;
         cursor: pointer;
         border: none;
-        border-radius: 0.3rem;
-
+    
         &:hover {
             background-color: darken($icon_color_main, 20%);
         }

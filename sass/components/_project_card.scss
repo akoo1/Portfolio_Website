@@ -12,7 +12,7 @@
                 -6px -6px 12px #ffffff;
 
 
-    /* This creates a "pressed card" inside the "flat card" */
+    /* This creates a "pressed card" on the "flat card" */
     &__inner-card {
         /* This makes all sides of the inner-card 10px away from the outer-card */
         position: absolute;
@@ -39,7 +39,7 @@
 
             // The text box floats up on hover 
             &:hover {
-                transform: translateY(-40px) scale(1.05);
+                transform: translateY(-10px) scale(1.05);
                 box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
                 background-color: #f8f8f8; /* A bit whiter than the bg */
             }

@@ -1,4 +1,25 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@-webkit-keyframes logo-text-fading {
+  from {
+    -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  to {
+    -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
+  }
+}
+@keyframes logo-text-fading {
+  from {
+    -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+            filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  }
+  to {
+    -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
+            filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,8 +35,7 @@ html {
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 4px;
+  border-radius: 1rem;
   -webkit-transition: all .2s;
   transition: all .2s;
 }
@@ -27,19 +47,29 @@ html {
           box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.21);
 }
 
-.btn--about-me {
-  background: linear-gradient(145deg, #daf6ff, #7d9da8);
+.btn--see-project, .btn--download-resume {
+  background: #efefef;
+  color: rgba(43, 33, 61, 0.85);
   display: inline-block;
-  color: #282828;
-  margin-top: 20px;
-  padding: 10px 30px;
+  margin-top: 3rem;
+  padding: 10px 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
 }
 
-.btn--about-me:hover {
+.btn--see-project:hover, .btn--download-resume:hover {
   -webkit-transform: translateY(-0.3rem);
           transform: translateY(-0.3rem);
   -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
           box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.21);
+}
+
+.btn--download-resume {
+  background: #2b2b2b;
+  color: white;
+  border: 1px solid white;
+  margin-left: 1.5rem;
 }
 
 .btn--src-code {
@@ -50,7 +80,7 @@ html {
   color: #282828;
   padding: 10px;
   font-size: 12px;
-  border-radius: 13px;
+  font-weight: bold;
 }
 
 .btn--src-code:hover {
@@ -68,7 +98,6 @@ html {
   padding: 10px 20px;
   cursor: pointer;
   border: none;
-  border-radius: 0.3rem;
 }
 
 .btn--send-message:hover {
@@ -114,9 +143,11 @@ html {
   width: 220px;
   margin: 30px;
   background-color: #2b2b2b;
-  -webkit-box-shadow: 20px 20px 17px #252525, -20px -20px 17px #313131;
-          box-shadow: 20px 20px 17px #252525, -20px -20px 17px #313131;
-  border-radius: 15px;
+  -webkit-box-shadow: 7px 7px 8px #252525, -7px -7px 8px #3f3f3f;
+          box-shadow: 7px 7px 8px #252525, -7px -7px 8px #3f3f3f;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
   /* Change the shape of the card from outwards to inwards on hover */
   /*Responsive*/
 }
@@ -153,7 +184,7 @@ html {
   background: #efefef;
   -webkit-box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #ffffff;
           box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #ffffff;
-  /* This creates a "pressed card" inside the "flat card" */
+  /* This creates a "pressed card" on the "flat card" */
 }
 
 .project__card__inner-card {
@@ -182,8 +213,8 @@ html {
 }
 
 .project__card__inner-card__text-box:hover {
-  -webkit-transform: translateY(-40px) scale(1.05);
-          transform: translateY(-40px) scale(1.05);
+  -webkit-transform: translateY(-10px) scale(1.05);
+          transform: translateY(-10px) scale(1.05);
   -webkit-box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
           box-shadow: 0 40px 70px rgba(0, 0, 0, 0.5);
   background-color: #f8f8f8;
@@ -268,7 +299,7 @@ html {
   /* In order to use absolute position on the blue-bar pseudo-elements */
   position: relative;
   /* HOVER EFFECT on nav links */
-  /* Create pseudo-elements. Position a blue bar right below each nav links Another hard-coded bar */
+  /* Create pseudo-elements. Position a blue bar right below each nav links. Another hard-coded bar */
 }
 
 .nav-bar__link::before {
@@ -290,6 +321,11 @@ html {
 }
 
 .nav-bar__link:hover::before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.nav-bar__link.current::before {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -426,66 +462,72 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.banner__heading-box {
-  margin-left: 150px;
-  margin-top: 100px;
-  /* z-index only works for positioned elements.
-        This increases the "stack order" of the heading, thus it appears on top of the huge logo now */
-  position: absolute;
-  z-index: 10;
-}
-
 .banner__heading-box h2 {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .banner__heading-box h2 span {
-  font-size: 1.5em;
-  font-weight: 700;
+  font-size: 1.8em;
+  font-weight: 400;
 }
 
-.banner__heading-box h3 {
-  font-size: 1.5em;
-  font-weight: 500;
-}
-
-.banner__logo {
-  font-size: 600px;
-  font-weight: 900;
-  font-family: "Major Mono Display", monospace;
-  margin-top: 80px;
-  /* This makes the huge logo always 30px away from the right border */
-  position: absolute;
-  right: 20px;
-  /* To create Neumorphism style words */
-  color: #2b2b2b;
-  -webkit-filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
-          filter: drop-shadow(-3px -3px 2px rgba(255, 255, 255, 0.3)) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2)) drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));
-}
-
-@media (max-width: 910px) {
-  .banner__logo {
-    font-size: 500px;
-  }
-}
-
-@media (max-width: 770px) {
-  .banner__logo {
-    font-size: 400px;
-  }
+.banner__heading-box--btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @media (max-width: 620px) {
-  .banner__logo {
-    font-size: 300px;
+  .banner__heading-box h2 {
+    font-size: 1.2rem;
   }
+  .banner__heading-box h2 span {
+    font-size: 1.7rem;
+  }
+}
+
+.banner__animated-text {
+  font-size: 5rem;
+  font-weight: 900;
+  font-family: 'Courier New', monospace;
+  color: #2b2b2b;
+  -webkit-filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+          filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+  -webkit-animation-name: logo-text-fading;
+          animation-name: logo-text-fading;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.banner__animated-text--lt {
+  margin-bottom: 9rem;
+  margin-right: 1.2rem;
+}
+
+@media (max-width: 535px) {
+  .banner__animated-text--lt {
+    margin-bottom: 12rem;
+  }
+}
+
+.banner__animated-text--gt {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
 }
 
 .about-me {
@@ -498,10 +540,10 @@ html {
 }
 
 .about-me__heading-box {
-  width: 100%;
+  font-size: 2.3rem;
+  font-weight: 500;
   text-align: center;
   padding: 70px 0 20px;
-  font-size: 20px;
 }
 
 .about-me__content-box {
@@ -585,9 +627,10 @@ html {
 }
 
 .projects__heading-box {
-  width: 100%;
+  font-size: 2.3rem;
+  font-weight: 500;
   text-align: center;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .projects__content-box {
@@ -615,10 +658,10 @@ html {
 }
 
 .contact__heading-box {
-  width: 100%;
   text-align: center;
   padding: 100px 0 60px;
-  font-size: 20px;
+  font-size: 2.3rem;
+  font-weight: 500;
 }
 
 .contact__content-box {
@@ -691,9 +734,10 @@ html {
 }
 
 .contact__content-box .email-form__heading {
+  font-size: 1.2rem;
+  font-weight: 500;
   margin-bottom: 5px;
   margin-right: 450px;
-  font-weight: 400;
 }
 
 @media (max-width: 700px) {

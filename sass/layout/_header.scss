@@ -30,7 +30,7 @@
         position: relative;
 
         /* HOVER EFFECT on nav links */
-        /* Create pseudo-elements. Position a blue bar right below each nav links Another hard-coded bar */
+        /* Create pseudo-elements. Position a blue bar right below each nav links. Another hard-coded bar */
         &::before {
             content: '';
             position: absolute;
@@ -46,6 +46,10 @@
             transition: all 0.5s ease-in-out;
         }
         &:hover::before {
+            transform: scale(1);
+        }
+        // Based on user scroll position, the 'current' class is toggled for nav links
+        &.current::before {
             transform: scale(1);
         }
 
@@ -74,7 +78,7 @@
     }
 
 
-    // ANIMATION (When users scroll down, the sticky class is added by JS)
+    // ANIMATION (When users scroll down, the sticky class is toggled for nav-bar)
     &.sticky {
     background-color: $background_color-light;
     /* This creates the effect that the nav bar shrinks */
@@ -106,7 +110,7 @@
     }
 
 
-    // ANIMATION (When the hamburger is clicked, the responsive class is added by JS) 
+    // ANIMATION (When the hamburger is clicked, the responsive class is toggled for nav-bar) 
     &.responsive .hamburger-btn {
         transform: translateX(-30px);
         background: transparent;

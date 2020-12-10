@@ -3,11 +3,14 @@
     height: 320px;
     width: 220px;
     margin: 30px;
-
     background-color: $background_color-dark;
-    box-shadow:  20px 20px 17px #252525,
-                -20px -20px 17px #313131;
-    border-radius: 15px;
+    box-shadow:  7px 7px 8px #252525,
+                -7px -7px 8px #3f3f3f;
+    // filter: drop-shadow(-3px -3px 3px rgba(255, 255, 255, 0.3))
+    //         drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2))
+    //         drop-shadow(15px 15px 15px rgba(0, 0, 0, 0.2));  
+    border-radius: 0.5rem;
+    transition: 0.1s;
 
     /* Change the shape of the card from outwards to inwards on hover */
     &:hover {
