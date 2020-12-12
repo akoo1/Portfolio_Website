@@ -45,17 +45,21 @@
             }
 
             .project-title {
-                height: 60px;
-                margin: 30px 15px 10px;
+                height: 55px;
+                margin: 15px 15px 10px;
+                color: $background-color-dark;
             }
             .project-description {
-                height: 130px;
-                font-size: 17px;
+                height: 120px;
+                font-size: 1rem;
+                color: #3a3a3a;
                 margin: 10px 15px;
             }
             .tech-stack-box {
                 display: flex;
-                margin: 10px 15px;
+                color: $background-color-dark;
+                margin-left: 2rem;
+                margin-bottom: 2rem;
 
                 &__languages-box {
                     height: 100px;
@@ -68,9 +72,31 @@
                     }
                 }
                 &__icon {
-                    color: $icon_color-main;
                     font-size: 60px;
-                    margin: 10px auto 0;
+                    margin-top: 0.8rem;
+                    margin-left: 3rem;
+
+                    &--i1 {
+                        color: none;
+                    }
+                    &--i2 {
+                        color: rgb(165, 75, 42);
+                    }
+                    &--i3 {
+                        color: green;
+                    }
+                    &--i4 {
+                        color: rgb(255, 89, 0);
+                    }
+                    &--i5 {
+                        color: purple;
+                    }
+                }
+
+                img {
+                    height: 80px;
+                    width: 80px;
+                    margin-left: 2.5rem;
                 }
             }
 
