@@ -2,7 +2,7 @@
 .projects {
     grid-area: Projects;
 
-    min-height: 110vh;
+    min-height: 100vh;
     background-color: $background-color-light;
     color: $font_color-dark;
 
@@ -17,6 +17,7 @@
         @include flex_center;
         flex-wrap: wrap;
         padding: 40px 0;
+        max-width: 1440px;
     }
 }
 

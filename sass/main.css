@@ -270,6 +270,10 @@ html {
   color: purple;
 }
 
+.project__card__inner-card__text-box .tech-stack-box__icon--i6 {
+  color: #659cbf;
+}
+
 .project__card__inner-card__text-box .tech-stack-box img {
   height: 80px;
   width: 80px;
@@ -641,7 +645,7 @@ html {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: Projects;
-  min-height: 110vh;
+  min-height: 100vh;
   background-color: #efefef;
   color: rgba(43, 33, 61, 0.85);
 }
@@ -666,6 +670,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 40px 0;
+  max-width: 1440px;
 }
 
 .contact {
@@ -785,6 +790,12 @@ html {
   -webkit-box-shadow: inset 20px 10px 15px #252525, inset -20px -10px 15px #313131;
           box-shadow: inset 20px 10px 15px #252525, inset -20px -10px 15px #313131;
   /* Responsive */
+}
+
+.contact__content-box .email-form__field--name input input:-webkit-autofill,
+.contact__content-box .email-form__field--email input input:-webkit-autofill,
+.contact__content-box .email-form__field--message textarea input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
 }
 
 @media (max-width: 700px) {
