@@ -169,7 +169,7 @@ html {
   position: relative;
   width: 320px;
   height: 440px;
-  margin: 20px 50px;
+  margin: 45px;
   border-radius: 27px;
   background: #efefef;
   -webkit-box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #ffffff;
@@ -670,7 +670,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 40px 0;
-  max-width: 1340px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
