@@ -794,9 +794,18 @@ html {
 }
 
 .contact__content-box .email-form__field--name input input:-webkit-autofill,
+.contact__content-box .email-form__field--name input input:-webkit-autofill:hover,
+.contact__content-box .email-form__field--name input input:-webkit-autofill:focus,
+.contact__content-box .email-form__field--name input input:-webkit-autofill:active,
 .contact__content-box .email-form__field--email input input:-webkit-autofill,
-.contact__content-box .email-form__field--message textarea input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+.contact__content-box .email-form__field--email input input:-webkit-autofill:hover,
+.contact__content-box .email-form__field--email input input:-webkit-autofill:focus,
+.contact__content-box .email-form__field--email input input:-webkit-autofill:active,
+.contact__content-box .email-form__field--message textarea input:-webkit-autofill,
+.contact__content-box .email-form__field--message textarea input:-webkit-autofill:hover,
+.contact__content-box .email-form__field--message textarea input:-webkit-autofill:focus,
+.contact__content-box .email-form__field--message textarea input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
 @media (max-width: 700px) {
