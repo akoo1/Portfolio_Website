@@ -254,12 +254,23 @@ html {
   color: none;
 }
 
+.project__card__inner-card__text-box .tech-stack-box__icon--i1 img {
+  width: 80px;
+  height: 80px;
+}
+
 .project__card__inner-card__text-box .tech-stack-box__icon--i2 {
-  color: #a54b2a;
+  color: none;
+}
+
+.project__card__inner-card__text-box .tech-stack-box__icon--i2 img {
+  width: 80px;
+  height: 60px;
+  margin-right: 2rem;
 }
 
 .project__card__inner-card__text-box .tech-stack-box__icon--i3 {
-  color: green;
+  color: #a54b2a;
 }
 
 .project__card__inner-card__text-box .tech-stack-box__icon--i4 {
@@ -272,12 +283,6 @@ html {
 
 .project__card__inner-card__text-box .tech-stack-box__icon--i6 {
   color: #659cbf;
-}
-
-.project__card__inner-card__text-box .tech-stack-box img {
-  height: 80px;
-  width: 80px;
-  margin-left: 2.5rem;
 }
 
 .grid-container {
@@ -545,13 +550,22 @@ html {
 
 @media (max-width: 535px) {
   .banner__animated-text--lt {
-    margin-bottom: 12rem;
+    margin-bottom: 8rem;
+    margin-right: 0.8rem;
+    font-size: 3rem;
   }
 }
 
 .banner__animated-text--gt {
   margin-top: 1rem;
   margin-left: 0.5rem;
+}
+
+@media (max-width: 535px) {
+  .banner__animated-text--gt {
+    margin-right: 2rem;
+    font-size: 3rem;
+  }
 }
 
 .about-me {

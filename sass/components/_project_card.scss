@@ -78,12 +78,21 @@
 
                     &--i1 {
                         color: none;
+                        img {
+                            width: 80px;
+                            height: 80px;
+                        }
                     }
                     &--i2 {
-                        color: rgb(165, 75, 42);
+                        color: none;
+                        img {
+                            width: 80px;
+                            height: 60px;
+                            margin-right: 2rem;
+                        }
                     }
                     &--i3 {
-                        color: green;
+                        color: rgb(165, 75, 42);
                     }
                     &--i4 {
                         color: rgb(255, 89, 0);
@@ -96,11 +105,7 @@
                     }
                 }
 
-                img {
-                    height: 80px;
-                    width: 80px;
-                    margin-left: 2.5rem;
-                }
+            
             }
 
         }
