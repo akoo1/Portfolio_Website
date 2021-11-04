@@ -136,8 +136,8 @@ html {
   -webkit-box-shadow: 7px 7px 8px #252525, -7px -7px 8px #3f3f3f;
           box-shadow: 7px 7px 8px #252525, -7px -7px 8px #3f3f3f;
   border-radius: 0.5rem;
-  -webkit-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   /* Change the shape of the card from outwards to inwards on hover */
   /*Responsive*/
 }
